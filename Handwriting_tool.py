@@ -6,8 +6,9 @@ from dotenv import load_dotenv,find_dotenv
 _ = load_dotenv(find_dotenv())
 API_KEY = os.getenv("GEMINI_API_KEY")
 os.environ["GEMINI_API_KEY"]=os.getenv("Gemini_API_Key")
-def main(Hukam:str):
-    font_path = "IndieFlower-Regular.ttf" 
+
+def Handwriting_tools(Hukam:str):
+    font_path = "D:\Personalized_voice_agent\sources\Caveat-VariableFont_wght.ttf" 
     font_size = 32
     page_width = 2000
     page_height = 1000
@@ -75,3 +76,4 @@ def main(Hukam:str):
     pages.append(f"page_{current_page}.png")
 
     print(f"Saved {len(pages)} page(s): {', '.join(pages)}")
+Handwriting_tools("write an assingment about testesterone")
